@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "grimoire-of-gaia-fabric",
+	"version": "${version}",
+	"name": "Grimoire of Gaia",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"TechPro424"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "GNU Lesser General Public License v3.0 only",
+	"icon": "assets/grimoire-of-gaia-fabric/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"org.refabricators.gaia.GrimoireOfGaia"
+		],
+		"client": [
+			"org.refabricators.gaia.GrimoireOfGaiaClient"
+		],
+		"fabric-datagen": [
+			"org.refabricators.gaia.GrimoireOfGaiaDataGenerator"
+		]
+	},
+	"mixins": [
+		"grimoire-of-gaia.mixins.json",
+		{
+			"config": "grimoire-of-gaia.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.22",
+		"minecraft": ">=1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
